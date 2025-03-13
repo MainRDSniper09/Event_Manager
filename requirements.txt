@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+sqlite3
+pydantic
+python-jose[cryptography] 
+passlib[bcrypt]
+python-multipart
+qrcode[pil]  # Para generar códigos QR
