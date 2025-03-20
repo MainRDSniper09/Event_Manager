@@ -1,9 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException
+from ...fastapi import models
 from sqlalchemy.orm import Session
-from .database import SessionLocal
-from . import models, schemas
+from ..database import SessionLocal
+from ...event_manager.backend import schemas
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from .auth import crear_token, autenticar_usuario, obtener_usuario_actual
+from ..auth import crear_token, autenticar_usuario, obtener_usuario_actual
 from passlib.context import CryptContext
 
 router = APIRouter()

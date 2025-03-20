@@ -1,12 +1,12 @@
 from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from passlib.context import CryptContext
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session # type: ignore
 from fastapi import Depends, HTTPException, status, Security
 from fastapi.security import OAuth2PasswordBearer
 from .database import SessionLocal
 from .models import Usuario
-from .schemas import TokenData
+from ..event_manager.backend.schemas import TokenData
 
 # Configuración de seguridad
 SECRET_KEY = "clave_super_secreta"

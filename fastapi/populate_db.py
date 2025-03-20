@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from backend.database import SessionLocal, engine
-from backend.models import Base, Usuario, Rol, Evento
+from database import SessionLocal, engine
+from models import Base, Usuario, Rol, Evento
 from datetime import datetime
 
 # 🔥 1. Eliminar y recrear la base de datos
